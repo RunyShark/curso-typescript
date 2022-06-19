@@ -1,6 +1,6 @@
 import { Hero } from "./classes/Hero";
 import powers from "./data/powers";
-import { printObject, generico, genericoArrow } from "./generics/generics";
+import { printObject, generico, genericoArrow, getPokemon } from "./generics";
 import { Villain, Hero as Heroo } from "./interfaces";
 
 //**Class */
@@ -33,3 +33,10 @@ import { Villain, Hero as Heroo } from "./interfaces";
 
 // console.log(genericoArrow<Heroo>(deadPool));
 //console.log(genericoArrow<Villain>(deadPool));
+
+//* generico api
+
+getPokemon(1)
+  .then((pokemon) => console.log(pokemon.sprites.front_default))
+  .catch((error) => console.log(error))
+  .finally(() => console.log("Fin de getPokemon"));
