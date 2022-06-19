@@ -1,0 +1,1 @@
+export { DecoradorPokemon } from "./decoradoreClass";

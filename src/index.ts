@@ -2,6 +2,7 @@ import { Hero } from "./classes/Hero";
 import powers from "./data/powers";
 import { printObject, generico, genericoArrow, getPokemon } from "./generics";
 import { Villain, Hero as Heroo } from "./interfaces";
+import { DecoradorPokemon } from "./decoradores";
 
 //**Class */
 //const ironman = new Hero("Dario", 1, 22);
@@ -34,9 +35,14 @@ import { Villain, Hero as Heroo } from "./interfaces";
 // console.log(genericoArrow<Heroo>(deadPool));
 //console.log(genericoArrow<Villain>(deadPool));
 
-//* generico api
+//* generico api interfaces
 
-getPokemon(1)
-  .then((pokemon) => console.log(pokemon.sprites.front_default))
-  .catch((error) => console.log(error))
-  .finally(() => console.log("Fin de getPokemon"));
+// getPokemon(1)
+//   .then((pokemon) => console.log(pokemon))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("Fin de getPokemon"));
+
+//*Decorardores
+
+const charmader = new DecoradorPokemon("Charmander");
+console.log(charmader);
